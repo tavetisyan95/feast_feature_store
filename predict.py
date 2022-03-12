@@ -47,7 +47,7 @@ features = store.get_online_features(
 ).to_dict()
 
 # Converting the features to a DataFrame
-features_df = pd.DataFrame.from_dict(features)
+features_df = pd.DataFrame.from_dict(data=features)
 
 # Loading our model and doing inference
 reg = load("model.joblib")

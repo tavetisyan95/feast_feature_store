@@ -12,7 +12,9 @@ training_df = store.get_saved_dataset(name="breast_cancer_dataset").to_df()
 
 # Separating the features and labels
 labels = training_df['target']
-features = training_df.drop(labels=['target', 'event_timestamp', "patient_id"], axis=1)
+features = training_df.drop(
+    labels=['target', 'event_timestamp', "patient_id"], 
+    axis=1)
 
 # Splitting the dataset into train and test sets
 X_train, X_test, y_train, y_test = train_test_split(features, 

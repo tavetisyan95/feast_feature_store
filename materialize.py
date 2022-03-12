@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 # Getting our FeatureStore
 store = FeatureStore(repo_path="breast_cancer/")
 
-# Code for loading features to online store between two days
+# Code for loading features to online store between two dates
 """store.materialize(
     end_date=datetime.now(),
     start_date=datetime.now() - timedelta(days=700))"""

@@ -3,7 +3,10 @@ from google.protobuf.duration_pb2 import Duration
 from feast import Entity, Feature, FeatureView, FileSource, ValueType
 
 # Declaring an entity for the dataset
-patient = Entity(name="patient_id", value_type=ValueType.INT64, description="The ID of the patient")
+patient = Entity(
+    name="patient_id", 
+    value_type=ValueType.INT64, 
+    description="The ID of the patient")
 
 # Declaring the source of the first set of features
 f_source1 = FileSource(
@@ -14,7 +17,7 @@ f_source1 = FileSource(
 # Defining the first set of features
 df1_fv = FeatureView(
     name="df1_feature_view",
-    ttl=Duration(seconds=86400 * 2),
+    ttl=Duration(seconds=86400 * 3),
     entities=["patient_id"],
     features=[
         Feature(name="mean radius", dtype=ValueType.FLOAT),
@@ -35,7 +38,7 @@ f_source2 = FileSource(
 # Defining the second set of features
 df2_fv = FeatureView(
     name="df2_feature_view",
-    ttl=Duration(seconds=86400 * 2),
+    ttl=Duration(seconds=86400 * 3),
     entities=["patient_id"],
     features=[
         Feature(name="mean compactness", dtype=ValueType.FLOAT),
@@ -56,7 +59,7 @@ f_source3 = FileSource(
 # Defining the third set of features
 df3_fv = FeatureView(
     name="df3_feature_view",
-    ttl=Duration(seconds=86400 * 2),
+    ttl=Duration(seconds=86400 * 3),
     entities=["patient_id"],
     features=[
         Feature(name="radius error", dtype=ValueType.FLOAT),
@@ -79,7 +82,7 @@ f_source4 = FileSource(
 # Defining the fourth set of features
 df4_fv = FeatureView(
     name="df4_feature_view",
-    ttl=Duration(seconds=86400 * 2),
+    ttl=Duration(seconds=86400 * 3),
     entities=["patient_id"],
     features=[
         Feature(name="concave points error", dtype=ValueType.FLOAT),
@@ -109,7 +112,7 @@ target_source = FileSource(
 target_fv = FeatureView(
     name="target_feature_view",
     entities=["patient_id"],
-    ttl=Duration(seconds=86400 * 2),
+    ttl=Duration(seconds=86400 * 3),
     features=[
         Feature(name="target", dtype=ValueType.INT32)        
         ],    

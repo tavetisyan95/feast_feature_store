@@ -7,7 +7,7 @@ from feast.infra.offline_stores.file_source import SavedDatasetFileStorage
 store = FeatureStore(repo_path="breast_cancer/")
 
 # Reading our targets as an entity DataFrame
-entity_df = pd.read_parquet("breast_cancer/data/target_df.parquet")    
+entity_df = pd.read_parquet(path="breast_cancer/data/target_df.parquet")    
 
 # Getting the indicated historical features
 # and joining them with our entity DataFrame
