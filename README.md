@@ -1,4 +1,4 @@
-This is the complete feature store that was built for [Feature Storage for ML with Feast: Part 1 – Building a Local Feature Store Infrastructure for Training and Prediction](https://kedion.medium.com/).
+This is the complete feature store that was built for [Feature Storage for ML with Feast: Part 1 – Building a Local Feature Store Infrastructure for Training and Prediction](https://kedion.medium.com/creating-a-feature-store-with-feast-part-1-37c380223e2f?source=user_profile---------0-------------------------------).
 
 The feature store by itself is located in `breast_cancer`. The Jupyter notebook and Python scripts in the root directory of the repo are intended to help you prepare data, fetch features, train a model, and do inference.
 
